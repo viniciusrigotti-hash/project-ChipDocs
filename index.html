@@ -1,20 +1,33 @@
 <!-- Página Inicial-->
 
+<!-- Geral -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Aba -->
     <title>project: ChipDocs</title>
     <link rel="icon" href="./tokenicon.png">
+
+    <!-- Link com o CSS -->
     <link rel="stylesheet" href="./style.css">
+
+    <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     
 </head>
+
+<!-- Body -->
 <body>
-    <header>
+
+    <!-- Header -->
+    <header class="header">
         <img src="./chipdocsLogo.png" id="logo">
         <nav>
             <ul id="menu">
@@ -24,19 +37,36 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Main -->
     <main>
-        <div>
+        <div id="left">
             <img src="./tokens1.png">
         </div>
-        <div>
-            <h1>Bem vindo ao <span id="textName">ChipDocs</span>!</h1>
-            <h2>Comece criando uma ficha ou explorando pela galeria!</h2>
-            <button>Crie uma ficha</button>
-            <button>Veja a galeria</button>
+        
+        <div id="right">
+            <div id="textIntro">
+                <h1 id="textWelcome">Bem vindo ao <span id="textName">ChipDocs</span>!</h1>
+                <h2 id="textStart">Comece criando uma ficha ou explorando pela galeria!</h2>
+            </div>
+            <div id="buttonsStart">
+                <a href="" class="buttonStart">Crie uma ficha</a>
+                <a href="" class="buttonStart">Veja a galeria</a>
+            </div>
+        </div>
+
+        <div id="bottom">
+            <hr>
         </div>
     </main>
-    <footer>
 
+    <!-- Footer -->
+    <footer>
+        <p>Copryright © 2026 Vinicius Rigotti. Nenhum direito reservado.</p>
     </footer>
+    
+    <!-- Link com o JS -->
+    <script type="module" src="./main.js"></script>
+
 </body>
 </html>
