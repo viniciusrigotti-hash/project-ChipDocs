@@ -1,6 +1,6 @@
 // Script principal
 
-//Declarações
+// Declarações
 const header = document.querySelector(".header");
 
 // Header animado
