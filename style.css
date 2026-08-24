@@ -166,6 +166,7 @@ hr {
   min-height: 150vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(28, 28, 48);
@@ -180,6 +181,11 @@ hr {
   align-items: center;
   gap: 30px;
   padding: 150px 20px 50px;
+}
+
+#imageToken {
+  height: 150px;
+  width: auto;
 }
 
 #titleInput {
@@ -238,4 +244,17 @@ hr {
 #buttonSave:hover {
   transform: scale(1.1);
   border-color: crimson;
+}
+
+/* Galeria */
+
+/* Main */
+
+.galleryMain {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(28, 28, 48);
+  color: white;
 }

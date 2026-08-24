@@ -26,7 +26,7 @@ buttonSave.addEventListener("click", async function (event) {
             ficha
         );
 
-        console.log("Ficha salva com sucesso!");
+        console.log("Ficha salva com sucesso");
         console.log(`ID da ficha: ${documento.id}`);
 
     }
