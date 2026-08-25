@@ -265,8 +265,8 @@ footer {
 }
 
 #ficha {
-  height: 213px;
-  width: 194px;
+  height: 50%;
+  width: 17%;
   background-color: lightgray;
   border: 5px solid gray;
   border-radius: 10px;
