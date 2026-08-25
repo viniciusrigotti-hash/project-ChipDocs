@@ -71,7 +71,7 @@ footer {
 
 /* Main */
 .homeMain {
-  height: 180vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -142,22 +142,6 @@ footer {
   border-color: crimson;
 }
 
-/* Bottom */
-#bottom {
-  height: 80vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-}
-
-hr {
-  border: none;
-  height: 2px;
-  width: 80vw;
-  background-color: rgba(0, 0, 0, 0.25);
-  margin: 20px 0;
-}
-
 /* Criar Ficha */
 
 /* Main */
@@ -220,9 +204,9 @@ hr {
   border-color: crimson;
 }
 
-#editor.empty::before {
-  content: attr(data-placeholder);
-  color: gray;
+#editor:empty::before {
+    content: attr(data-placeholder);
+    color: gray;
 }
 
 #buttonSave {
@@ -255,6 +239,42 @@ hr {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(28, 28, 48);
   color: white;
+  padding-top: 5%;
+}
+
+#galleryContainer {
+  height: 70vh;
+  width: 60vw;
+  background-color: white;
+  color: black;
+  border: 3px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+#ficha {
+  height: 213px;
+  width: 194px;
+  background-color: lightgray;
+  border: 5px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }

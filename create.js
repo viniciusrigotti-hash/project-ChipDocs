@@ -3,21 +3,26 @@
 // Import do Firebase
 import { database } from "./firebase.js";
 
-import {collection, addDoc} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+import {collection, addDoc, serverTimestamp} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 // Declarações
 const editor = document.getElementById("editor");
 const titleInput = document.getElementById("titleInput");
 const buttonSave = document.getElementById("buttonSave");
+const limite = 10;
 
 //Botão de salvar
 buttonSave.addEventListener("click", async function (event) {
     event.preventDefault();
     
     const title = titleInput.value;
-    const content = editor.textContent;
+    const content = editor.innerHTML;
     
-    const ficha = {title: title, content: content};
+    const ficha = {
+        title: title,
+        content: content,
+        createdAt: serverTimestamp()
+    };
 
     try {
 
@@ -38,39 +43,10 @@ buttonSave.addEventListener("click", async function (event) {
 });
 
 // Colar sem herdar formatação
-editor.addEventListener("paste", function (event) {
+editor.addEventListener("paste", (event) => {
     event.preventDefault();
 
-    const editorText = event.clipboardData.getData("text/plain");
-    
-    const selection = window.getSelection();
-    if (!selection.rangeCount) return;
-    selection.deleteFromDocument();
+    const texto = event.clipboardData.getData("text/plain");
 
-    const range = selection.getRangeAt(0);
-    range.insertNode(document.createTextNode(editorText));
-
-    range.collapse(false);
-    selection.removeAllRanges();
-    selection.addRange(range);
-
-    editor.classList.remove("empty");
-});
-
-// Texto placeholder aparecer quando vazio
-if (editor.textContent.trim() === "")
-{
-    editor.classList.add("empty");
-}
-
-editor.addEventListener("input", function (event) {
-    if (editor.textContent.trim() === "")
-    {
-        editor.classList.add("empty");
-        
-    }
-    else
-    {
-        editor.classList.remove("empty");
-    }
+    document.execCommand("insertText", false, texto);
 });
